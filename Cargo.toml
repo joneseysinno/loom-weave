@@ -1,0 +1,19 @@
+[package]
+name = "loom-weave"
+version = "0.1.0"
+edition = "2024"
+description = "Graph weaving policy contracts for the Loom domain layer."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/plexus-loom/plexus-loom"
+documentation = "https://docs.rs/loom-weave"
+keywords = ["graph", "weave", "assembly", "loom", "plexus"]
+categories = ["data-structures"]
+
+[dependencies]
+loom-domain = { version = "0.1.0", path = "../loom-domain" }
+plexus-core = { version = "0.1.0", path = "../plexus-core" }
+thiserror = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]
+serde_json = "1"
