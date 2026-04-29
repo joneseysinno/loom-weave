@@ -1,17 +1,17 @@
 [package]
-name = "loom-weave"
+name = "frp-weave"
 version = "0.1.0"
 edition = "2024"
-description = "Graph weaving policy contracts for the Loom domain layer."
+description = "Graph weaving policy contracts for the frp domain layer."
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/joneseysinno/loom-weave.git"
-documentation = "https://docs.rs/loom-weave"
-keywords = ["graph", "weave", "assembly", "loom", "plexus"]
+repository = "https://github.com/joneseysinno/frp-weave.git"
+documentation = "https://docs.rs/frp-weave"
+keywords = ["graph", "weave", "assembly", "frp", "infinite-db"]
 categories = ["data-structures"]
 
 [dependencies]
-loom-domain = { version = "0.1.0", path = "../loom-domain" }
-plexus-base = { version = "0.1.0", path = "../plexus-core" }
+frp-domain = { version = "0.1.0", path = "../frp-domain" }
+frp-plexus = { version = "0.1.0", path = "../frp-plexus" }
 thiserror = { workspace = true }
 serde = { workspace = true }
 

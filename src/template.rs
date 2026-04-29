@@ -2,8 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use loom_domain::{AtomKind, BlockSchema, Port, port::PortDirection};
-use plexus_base::{BlockId, PortId, TypeSig};
+use frp_domain::{AtomKind, BlockSchema, Port, port::PortDirection};
+use frp_plexus::{BlockId, PortId, TypeSig};
 
 use crate::archetype::Archetype;
 use crate::error::WeaveError;
@@ -36,7 +36,7 @@ impl PortDef {
 }
 
 /// A serialisable template that can be turned into an [`Archetype`] or used to
-/// instantiate a [`loom_domain::Block`] directly.
+/// instantiate a [`frp_domain::Block`] directly.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct BlockTemplate {
     /// Archetype name.
@@ -85,7 +85,7 @@ impl BlockTemplate {
     }
 
     /// Shorthand — convert to archetype and immediately instantiate a block.
-    pub fn instantiate(&self, block_id: BlockId) -> Result<loom_domain::Block, WeaveError> {
+    pub fn instantiate(&self, block_id: BlockId) -> Result<frp_domain::Block, WeaveError> {
         self.to_archetype()?.instantiate(block_id)
     }
 }
@@ -123,7 +123,7 @@ fn parse_atom_kind(s: &str) -> Result<AtomKind, WeaveError> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use plexus_base::BlockId;
+    use frp_plexus::BlockId;
 
     fn basic_template() -> BlockTemplate {
         BlockTemplate {

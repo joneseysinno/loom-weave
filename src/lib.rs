@@ -1,7 +1,7 @@
-//! Weave layer — stateless assembly and validation for the Loom graph domain.
+//! Weave layer — stateless assembly and validation for the frp graph domain.
 //!
 //! Provides:
-//! - [`Composer`] — assembles [`loom_domain::Block`]s from atoms and a schema.
+//! - [`Composer`] — assembles [`frp_domain::Block`]s from atoms and a schema.
 //! - [`Validator`] — validates connections and block/schema consistency.
 //! - [`Archetype`] / [`ArchetypeRegistry`] — named, versioned block blueprints.
 //! - [`BlockTemplate`] / [`PortDef`] — serialisable templates convertible to archetypes.

@@ -1,6 +1,6 @@
 //! Error types for the weave layer.
 
-use plexus_base::{AtomId, BlockId, EdgeId, PortId};
+use frp_plexus::{AtomId, BlockId, EdgeId, PortId};
 use thiserror::Error;
 
 #[derive(Debug, Error)]
