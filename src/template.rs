@@ -3,7 +3,7 @@
 use serde::{Deserialize, Serialize};
 
 use loom_domain::{AtomKind, BlockSchema, Port, port::PortDirection};
-use plexus_core::{BlockId, PortId, TypeSig};
+use plexus_base::{BlockId, PortId, TypeSig};
 
 use crate::archetype::Archetype;
 use crate::error::WeaveError;
@@ -123,7 +123,7 @@ fn parse_atom_kind(s: &str) -> Result<AtomKind, WeaveError> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use plexus_core::BlockId;
+    use plexus_base::BlockId;
 
     fn basic_template() -> BlockTemplate {
         BlockTemplate {

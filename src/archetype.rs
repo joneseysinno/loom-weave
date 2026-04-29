@@ -3,7 +3,7 @@
 use std::collections::HashMap;
 
 use loom_domain::{AtomKind, Block, BlockSchema, Meta};
-use plexus_core::BlockId;
+use plexus_base::BlockId;
 
 use crate::error::WeaveError;
 
@@ -93,7 +93,7 @@ impl ArchetypeRegistry {
 mod tests {
     use super::*;
     use loom_domain::{BlockSchema, Port};
-    use plexus_core::{BlockId, PortId, TypeSig};
+    use plexus_base::{BlockId, PortId, TypeSig};
 
     fn simple_schema() -> BlockSchema {
         BlockSchema::new(

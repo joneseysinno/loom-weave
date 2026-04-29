@@ -54,7 +54,7 @@ impl Validator {
 mod tests {
     use super::*;
     use loom_domain::Port;
-    use plexus_core::{PortId, TypeSig};
+    use plexus_base::{PortId, TypeSig};
 
     fn in_port(id: u64, name: &str, ty: TypeSig) -> Port {
         Port::new_input(PortId::new(id), name.to_string(), ty)

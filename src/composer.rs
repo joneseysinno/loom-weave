@@ -3,7 +3,7 @@
 use std::collections::HashSet;
 
 use loom_domain::{Atom, Block, BlockSchema};
-use plexus_core::BlockId;
+use plexus_base::BlockId;
 
 use crate::error::WeaveError;
 
@@ -33,7 +33,7 @@ impl Composer {
             .map_err(|e| WeaveError::ValidationFailed(e.to_string()))?;
 
         // Check for duplicate atom ids.
-        let mut seen: HashSet<plexus_core::AtomId> = HashSet::new();
+        let mut seen: HashSet<plexus_base::AtomId> = HashSet::new();
         for atom in &atoms {
             if !seen.insert(atom.id) {
                 return Err(WeaveError::ValidationFailed(format!(
@@ -62,7 +62,7 @@ mod tests {
         AtomKind, AtomMeta, BlockSchema, Port,
         port::PortDirection as PD,
     };
-    use plexus_core::{AtomId, BlockId, LayerTag, PortId, TypeSig};
+    use plexus_base::{AtomId, BlockId, LayerTag, PortId, TypeSig};
 
     fn make_port(id: u64, name: &str, dir: PD) -> Port {
         match dir {
